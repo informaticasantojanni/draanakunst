@@ -1,0 +1,54 @@
+.homeAbout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeAbout--text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.homeAbout--text-title {
+    border-bottom: 5px solid var(--colorPri5);
+}
+
+.homeAbout--text-body {
+    line-height: 2rem;
+}
+
+.homeAbout--image {
+    /* max-width: 100%;
+    height: 400px; */
+    /* background-image: url("../../../assets/Levin_frente_1024.jpg");
+ background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.homeAbout--image  img {
+    width: 100%;
+}
+
+
+/* Media query for devices with a maximum width of 600 pixels */
+@media only screen and (min-width: 768px) {
+    .homeAbout {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .homeAbout--text {
+        width: 50%;
+
+    }
+
+    .homeAbout--image {
+        width: 50%;
+    }
+
+}

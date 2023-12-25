@@ -1,0 +1,157 @@
+/*****************************************
+ Estilo para el navbar en modo mobile
+ *****************************************/
+
+ nav {
+  width: 100%;
+}
+
+
+/* .navbar-mobile {} */
+
+.navMobile--container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.navMobile__header {
+  max-width: 100%;
+  height: 70px;
+  padding: 1rem;
+}
+
+/* .navMobile__header__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 1px; 
+} 
+
+.navMobile__header__content p {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--colorPri5);
+} */
+
+.navMobile__header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navMobile__header__content p {
+  margin: 0; 
+  font-size: 1.2rem;
+  color: var(--colorPri5);
+  text-align: center; 
+}
+
+.navMobile__header.expanded {
+  background-color: var(--colorPri2);
+}
+
+.navMobile__header.expanded label span {
+  background: #000 !important;
+}
+
+.navMobile__body {
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--colorPri5);
+  padding-top: 100px;
+  transform: scale(0);
+  transition: opacity 0.5s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.navMobile__body.visible {
+  opacity: 0.95;
+  transform: scale(1);
+}
+
+.navMobile__body ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navMobile__body li {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.navMobile__body li .linkTo {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--colorPri2);
+}
+
+.navMobile__body li .linkTo:hover {
+  text-decoration: none;
+  color: var(--colorPri7)
+}
+
+
+/*****************************************
+ Estilo para el navbar en modo desktop
+ *****************************************/
+
+.navDesktop--container {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  height: 90px;
+}
+
+.navDesktop__logo {
+  min-width: 400px;
+  /* display: flex;
+  align-items: center;
+  flex-wrap: nowrap; */
+  padding: 1rem;
+  display: block;
+  background-color: var(--colorPri5);
+  color: var(--colorPri2);
+}
+
+
+.navDesktop__links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+
+
+.navDesktop__links ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navDesktop__links li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navDesktop__links li .linkTo {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--colorPri8);
+  padding: 0 3rem;
+}
+
+.navDesktop__links li .linkTo:hover {
+  text-decoration: none;
+  color: var(--colorPri5);
+}

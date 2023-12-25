@@ -1,0 +1,79 @@
+body {}
+
+.contactForm {
+    width: 100%;
+}
+
+
+.contactForm__form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm__header {
+    width: 100%;
+}
+
+.contactForm__header p {
+    text-align: center;
+}
+
+.contactForm__form__input {
+    width: 100%;
+    margin: 0;
+}
+
+.contactForm__form__input label {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.contactForm__form__input input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--colorPri2);
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.contactForm__form__input input:focus {
+    background-color: var(--colorPri9);
+}
+
+.contactForm__form__input textarea {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--colorPri2);
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.contactForm__form__input textarea:focus {
+    background-color: var(--colorPri9);
+}
+
+.contactForm__form__btn--style {
+    cursor: pointer;
+}
+
+
+
+/* Media query for devices with a maximum width of 600 pixels */
+@media only screen and (min-width: 768px) {}

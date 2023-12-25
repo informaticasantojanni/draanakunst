@@ -1,0 +1,119 @@
+.servicesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}    
+
+
+@media (min-width: 1440px) {
+
+    .servicesList {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .serviceList--item1 {
+        order: 1;
+    }
+
+    .serviceList--item2 {
+        order: 2;
+    }
+
+    .serviceList--item3 {
+        order: 4;
+    }
+
+    .serviceList--item4 {
+        order: 3;
+    }
+    .serviceList--item5 {
+        order: 5;
+    }
+    .serviceList--item6 {
+        order: 6;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+/* .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (min-width: 1024px) {
+    .services {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: repeat(3, 600px);
+        grid-gap: 10rem;
+        padding: 20px;
+    } 
+
+
+    .services__description1 {
+        order: 1;
+        border: 1px solid blue;
+        
+    }
+
+    .services__photo1 {
+        order: 2;
+        border: 1px solid blue;
+    } 
+ 
+    .services__description2 {
+        order: 4;
+    }
+
+    .services__photo2 {
+        order: 3;
+    }
+
+    .services__description3 {
+        order: 5;
+    }
+
+    .services__photo3 {
+        order: 6;
+    } 
+
+}
+
+ */

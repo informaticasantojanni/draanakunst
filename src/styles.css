@@ -1,0 +1,215 @@
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300&display=swap');
+
+/* ********** */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+:root {
+
+    /* FORMAT STYLES */
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    /* PALETTE COLORS */
+
+    /* PRIMARY COLORS */
+
+    --colorPri1: #fff;
+    --colorPri2: #F8F8F8;
+    --colorPri3: #25a59a;
+    --colorPri4: #00b6cc;
+    --colorPri5: #0097b5;
+    --colorPri6: #006688;
+    --colorPri7: #252442;
+    --colorPri8: #2E3033;
+    --colorPri9: #D0D0D0D0;
+
+    /* Levin Palette colors*/
+    --colorPri10: #dd6666;
+    --colorPri11: #9187c4;
+    --colorPri12: #6969B3;
+    --colorPri13: #3E4C94;
+
+    /* SECUNDARY COLORS */
+
+    --colorSec1: #57272e;
+    --colorSec2: #793e3f;
+    --colorSec3: #a66052;
+    --colorSec4: #df906c;
+    --colorSec5: #f2cd82;
+
+}
+
+/* FONTS */
+
+.titlePri1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.titlePri2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+
+}
+
+.titlePri3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+
+}
+
+.titleSec1 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.titleSec2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+
+}
+
+.titleSec3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+
+}
+
+.text1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+
+}
+
+.text2 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.text3{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.textLinks {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
+
+.textButton {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
+
+.main-container {
+    width: 100%;
+
+}
+
+
+
+/* BUTTONS */
+
+.btn1 {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    background-color: var(--colorPri5);
+    border: 1px solid var(--colorPri5);
+    color: var(--colorPri1);
+    transition: 0.5s;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.btn1:hover {
+    background-color: transparent;
+    color: var(--colorPri5);
+    ;
+}
+
+/* MARGIN */
+.mt-0 {
+    margin-top: 0rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.mb-0 {
+    margin-bottom: 0rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .main-container {
+        width: 80%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}

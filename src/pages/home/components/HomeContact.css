@@ -1,0 +1,80 @@
+.homeContact {
+    width: 100%;
+}
+
+.homeContact--container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContact__cell {
+    min-height: 100px;
+    color: var(--colorPri1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: var(--colorPri5);
+
+}
+
+.homeContact__email {
+    min-height: 100px;
+    color: var(--colorPri1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: var(--colorPri6);
+}
+
+
+
+.homeContact__email__text {
+    font-family: var(--titlePri1);
+    font-size: 1.2rem;
+}
+
+.homeContact__email__text .link-to {
+    text-decoration: none;
+    color: var(--colorPri1);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 100,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.google-icon {
+    font-size: 5rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+
+/* Media query for devices with a maximum width of 600 pixels */
+@media only screen and (min-width: 768px) {
+
+    .homeContact--container {
+        width: 80%;
+        height: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row; 
+    }
+
+
+    .homeContact__cell {
+        width: 100%;
+    }
+
+    .homeContact__email {
+        width: 100%;
+    }
+
+}
