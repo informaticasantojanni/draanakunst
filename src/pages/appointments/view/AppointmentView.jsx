@@ -22,6 +22,7 @@ const AppointmentView = () => {
 
   const today = new Date();
   const [date, setDate] = useState(today);
+  const [dataEvents, setDataEvents] = useState([]);
 
 
   const handleGetEventsForDay = (date) => {
@@ -35,9 +36,13 @@ const AppointmentView = () => {
         day: date.getDate()
       }
     }
+
     fetchUrl(request);
-        console.log("Day selected is: ", date.getFullYear(), date.getMonth(), date.getDate())
+    // console.log("Day selected is: ", date.getFullYear(), date.getMonth(), date.getDate())
   }
+
+
+
 
   const handleGetEventsByTimeRange = () => {
     // Prepara data object with form input data
@@ -48,7 +53,7 @@ const AppointmentView = () => {
         rangeEnd: 10
       }
     }
-    fetchUrl(request);
+    // fetchUrl(request);
   }
 
 
@@ -59,7 +64,7 @@ const AppointmentView = () => {
         event_id: eventId
       }
     }
-    fetchUrl(request);
+    // fetchUrl(request);
   }
 
   const fetchUrl = (request) => {
@@ -74,27 +79,51 @@ const AppointmentView = () => {
       .then((response) => response.json())
       .then((data) => {
         // Handle the response from the Google Apps Script endpoint
-        console.log("Response status: ", data);
-        // console.log("Response data: ", data.events);
-        // setBtnSubmitText("Enviado!");
-        // setTimeout(() => { setBtnSubmitText('Enviar') }, 2000);
-        // Reset form fields after submission
-
+        if (data.length > 0) {
+          const tempDataEvents = data.map(event => {
+            return {
+              title: event.title,
+              startTime: event.startTime
+            }
+          })
+          console.log("data map is ", tempDataEvents[0].title)
+          setDataEvents(tempDataEvents);
+        } else {
+          setDataEvents(["no events"])
+        }
       })
       .catch((error) => {
         console.log('Error:', error.message);
       });
   }
 
+  const disablePreviusDates = ({ date, view }) => {
+    // Disable all days before today
+    console.log('Current date:', date);
+    console.log('Today:', new Date());
+    return date < new Date() ;
+  };
 
   return (
-    <div>
-      <button onClick={() => handleGetEventsByTimeRange()}>Get Calendar Events</button>
-      <button onClick={() => handleGetEventById("28spqq5fj38h0i9shmlev22efm@google.com")}>Get Calendar Events</button>
+    <div className='appointments--container'>
+      {/* <button onClick={handleGetEventsByTimeRange}>Get Calendar Events</button>
+      <button onClick={() => handleGetEventById("28spqq5fj38h0i9shmlev22efm@google.com")}>Get Event By ID</button> */}
 
-      <Calendar onChange={handleGetEventsForDay} value={date} />
-    </div >
-  )
+      <Calendar tileDisabled={disablePreviusDates} onChange={handleGetEventsForDay} value={date} />
+
+      <div className='appointments__buttons--container'>
+        {dataEvents && Array.isArray(dataEvents) && dataEvents.length > 0 ? (
+          dataEvents.map((event, index) => (
+            <button className='appointments__buttons--icon' key={index}>{event.title} {event.startTime}</button>
+          ))
+        ) : (
+          <p>No events available</p>
+        )}
+      </div>
+
+    </div>
+  );
+
 }
 
 export default AppointmentView
