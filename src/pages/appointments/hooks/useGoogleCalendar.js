@@ -60,7 +60,8 @@ const useGoogleCalendar = () => {
                         day: event.day,
                         month: event.month,
                         startTime: event.startTime,
-                        endTime: event.endTime
+                        endTime: event.endTime,
+                        type: "Virtual"
                     }
                 });
             const tempPresencialEvents = dateEvents.filter(event => event.title.toLowerCase() === "presencial")
@@ -71,7 +72,8 @@ const useGoogleCalendar = () => {
                         day: event.day,
                         month: event.month,
                         startTime: event.startTime,
-                        endTime: event.endTime
+                        endTime: event.endTime,
+                        type: "Presencial"
                     }
                 });
 

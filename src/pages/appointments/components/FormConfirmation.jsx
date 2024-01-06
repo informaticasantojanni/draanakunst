@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "./formConfirmation.css"
-import useGoogleCalendar from '../hooks/useGoogleCalendar';
 import { useTurnos } from '../../../hooks/useTurnos';
 
 
@@ -77,7 +76,8 @@ const FormConfirmation = () => {
             <div className="contactForm--container">
 
                 <div className="contactForm__header">
-                    <p className='text2 mb-2'>Usted ha seleccionado un turno para el día {selectedEvent.day} de {selectedEvent.month} a las {selectedEvent.startTime} Hs. Para confirmar, por favor complete sus datos y haga click en Confirmar:</p>
+                    <p className='text2 mb-2'>Usted ha seleccionado un turno en la modalidad {selectedEvent.type} para el día {selectedEvent.day} de {selectedEvent.month} a las {selectedEvent.startTime} Hs</p>
+                    <p className='text2 mb-2'>Para confirmar, por favor complete sus datos y haga click en Confirmar, de lo contrario haga click en Cancelar para volver al Calendario:</p>
                 </div>
 
                 <div className="contactForm__body">
