@@ -6,6 +6,7 @@ import ServicesView from '../../pages/services/view/ServicesView';
 import AboutView from '../../pages/about/view/AboutView';
 import ContactView from '../../pages/contact/view/ContactView';
 import AppointmentView from '../../pages/appointments/view/AppointmentView';
+import useGoogleCalendar from '../../pages/appointments/hooks/useGoogleCalendar';
 
 
 export const appRouter = createHashRouter([

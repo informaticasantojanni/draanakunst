@@ -1,10 +1,14 @@
 import React from 'react'
 import { HelmetProvider } from "react-helmet-async";
+import TurnosProvider from '../../providers/TurnosProvider';
 
-const RootProvider = ({children}) => {
+
+const RootProvider = ({ children }) => {
     return (
         <HelmetProvider>
-            {children}
+            <TurnosProvider>
+                {children}
+            </TurnosProvider>
         </HelmetProvider>
     )
 }
